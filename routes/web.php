@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Money\MoneyController;
 use App\Http\Controllers\ProfileController;
-
+use App\Http\Controllers\Web\Lista\ListController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +28,12 @@ Route::middleware('auth')->group(function () {
   Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
   Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
   Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+  // Lista routes
+  Route::prefix('lists')->name('lists')->group(function () {
+    Route::get('table', [ListController::class, 'showTable'])->name('table');
+  });
+  Route::resource('lists', ListController::class);
 });
 
 require __DIR__ . '/auth.php';
