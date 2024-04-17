@@ -19,7 +19,7 @@
 					<span class="sidebar-icon">
 						<img src="{{ asset('img/brand/light.svg') }}" height="20" width="20" alt="Volt Logo">
 					</span>
-					<span class="mt-1 ms-1 sidebar-text">iLedger</span>
+					<span class="mt-1 ms-1 sidebar-text">Project Template</span>
 				</a>
 			</li>
 			<li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
