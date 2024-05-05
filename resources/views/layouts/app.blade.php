@@ -11,21 +11,27 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-    <!-- Volt CSS -->
-    <link type="text/css" href="{{ asset('theme/volt.css') }}" rel="stylesheet">
+    {{-- Bootstrap icons --}}
+	  <link type="text/css" href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
 
+    {{-- Fontawesome icons --}}
+    <link type="text/css" href="{{ asset('vendor/fontawesome-free-6/css/all.min.css') }}" rel="stylesheet">
+    
     {{-- datatable --}}
 	  <link type="text/css" rel="stylesheet" href="{{ asset('vendor/bootstrap-datatables/bootstrap-datatable.min.css') }}">
+
+    <!-- Volt CSS -->
+    <link type="text/css" href="{{ asset('theme/volt.css') }}" rel="stylesheet">
 
     <!-- Per Page CSS -->
     @stack('styles')
 
     <style>
-      footer { 
+      /* footer { 
         position: fixed;
         bottom: 0;
         width: 80vw;
-      }
+      } */
     </style>
   </head>
   <body>
@@ -57,7 +63,10 @@
 
     <!-- Core -->
 		{{-- <script src="{{ asset('vendor/@popperjs/core/dist/umd/popper.min.js') }}"></script> --}}
-		<script src="{{ asset('vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+		{{-- <script src="{{ asset('vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script> --}}
+
+    {{-- bootstrap --}}
+	  <script src="{{ asset('vendor/bootstrap/bootstrap.min.js') }}"></script>
 
     {{-- datatables --}}
     <script type="text/javascript" src="{{ asset('vendor/bootstrap-datatables/jquery.datatables.min.js') }}" ></script>
@@ -71,6 +80,7 @@
     @include('sweetalert::alert')
 
     <!-- Volt JS -->
+	  <script src="{{ asset('theme/custom.js') }}"></script>
     <script src="{{ asset('theme/volt.js') }}"></script>
 
     {{-- page specific js files --}}
