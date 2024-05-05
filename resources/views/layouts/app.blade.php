@@ -14,6 +14,9 @@
     <!-- Volt CSS -->
     <link type="text/css" href="{{ asset('theme/volt.css') }}" rel="stylesheet">
 
+    {{-- datatable --}}
+	  <link type="text/css" rel="stylesheet" href="{{ asset('vendor/bootstrap-datatables/bootstrap-datatable.min.css') }}">
+
     <!-- Per Page CSS -->
     @stack('styles')
 
@@ -41,15 +44,37 @@
       @include('layouts.footer')
 
     </main>
+    
+    @vite('resources/js/app.js')
+    {{-- popper for dropdowns --}}
+    <script src="{{ asset('vendor/@popperjs/popper.min.js') }}"></script>
+
+    {{-- jquery --}}
+    <script type="text/javascript" src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    
+    {{-- jquery ui --}}
+    <script type="text/javascript" src="{{ asset('vendor/jquery-ui/jquery-ui.js') }}"></script>
 
     <!-- Core -->
-		<script src="{{ asset('vendor/@popperjs/core/dist/umd/popper.min.js') }}"></script>
+		{{-- <script src="{{ asset('vendor/@popperjs/core/dist/umd/popper.min.js') }}"></script> --}}
 		<script src="{{ asset('vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
+    {{-- datatables --}}
+    <script type="text/javascript" src="{{ asset('vendor/bootstrap-datatables/jquery.datatables.min.js') }}" ></script>
+    <script type="text/javascript" src="{{ asset('vendor/bootstrap-datatables/bootstrap-datatables.min.js') }}" ></script>
+
+    {{-- Smooth scroll --}}
+    <script src="{{ asset('vendor/smooth-scroll/smooth-scroll.min.js') }}"></script>
+
+    {{-- sweetalert --}}
+    <script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
+    @include('sweetalert::alert')
 
     <!-- Volt JS -->
     <script src="{{ asset('theme/volt.js') }}"></script>
 
-    <!-- Per Page JS -->
+    {{-- page specific js files --}}
     @stack('scripts')
+
   </body>
 </html>
