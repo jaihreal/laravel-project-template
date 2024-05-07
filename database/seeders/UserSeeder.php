@@ -16,10 +16,13 @@ class UserSeeder extends Seeder
 	public function run(): void
 	{
 		DB::table('users')->insert([
-			'id' 				=> Str::uuid()->toString(),
-			'name' 			=> 'Jaih Real',
-			'email' 		=> 'jaihrealsasing@gmail.com',
-			'password' 	=> Hash::make('12345678'),
+			'id' 				  => Str::uuid()->toString(),
+			'first_name' 	=> 'Jaih Real',
+			'middle_name' => 'Pallar',
+			'last_name' 	=> 'Sasing',
+			'email' 		  => 'jaihrealsasing@gmail.com',
+			'password' 	  => Hash::make('12345678'),
+			'role' 		    => 'Administrator',
 			'created_at'  => Carbon::now(),
 			'updated_at'  => Carbon::now(),
 			'email_verified_at' => Carbon::now(),
