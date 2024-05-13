@@ -25,14 +25,6 @@
 
     <!-- Per Page CSS -->
     @stack('styles')
-
-    <style>
-      /* footer { 
-        position: fixed;
-        bottom: 0;
-        width: 80vw;
-      } */
-    </style>
   </head>
   <body>
 
@@ -60,10 +52,6 @@
     
     {{-- jquery ui --}}
     <script type="text/javascript" src="{{ asset('vendor/jquery-ui/jquery-ui.js') }}"></script>
-
-    <!-- Core -->
-		{{-- <script src="{{ asset('vendor/@popperjs/core/dist/umd/popper.min.js') }}"></script> --}}
-		{{-- <script src="{{ asset('vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script> --}}
 
     {{-- bootstrap --}}
 	  <script src="{{ asset('vendor/bootstrap/bootstrap.min.js') }}"></script>
