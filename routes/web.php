@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Money\MoneyController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Web\ActivityLog\ActivityLogController;
 use App\Http\Controllers\Web\User\UserController;
